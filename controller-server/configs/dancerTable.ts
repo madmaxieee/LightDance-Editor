@@ -258,17 +258,33 @@ const dancerTable: DancerData = {
     connected: false,
     interface: "wifi",
   },
-  "E4:5F:01:C1:76:D6": {
+  // "E4:5F:01:C1:76:D6": {
+  //   IP: "192.168.0.0",
+  //   MAC: "E4:5F:01:C1:76:D6",
+  //   dancer: "16_scythe",
+  //   hostname: "lightdance-16",
+  //   connected: false,
+  //   interface: "ethernet",
+  // },
+  // "E4:5F:01:C1:76:D8": {
+  //   IP: "192.168.0.0",
+  //   MAC: "E4:5F:01:C1:76:D8",
+  //   dancer: "16_scythe",
+  //   hostname: "lightdance-16",
+  //   connected: false,
+  //   interface: "wifi",
+  // },
+  "B8:27:EB:3A:D4:70": {
     IP: "192.168.0.0",
-    MAC: "E4:5F:01:C1:76:D6",
+    MAC: "B8:27:EB:3A:D4:70",
     dancer: "16_scythe",
     hostname: "lightdance-16",
     connected: false,
     interface: "ethernet",
   },
-  "E4:5F:01:C1:76:D8": {
+  "B8:27:EB:6F:81:25": {
     IP: "192.168.0.0",
-    MAC: "E4:5F:01:C1:76:D8",
+    MAC: "B8:27:EB:6F:81:25",
     dancer: "16_scythe",
     hostname: "lightdance-16",
     connected: false,
