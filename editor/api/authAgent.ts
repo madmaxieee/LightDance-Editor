@@ -42,6 +42,12 @@ export const authAgent = {
   // check token in cookie
   checkToken: async () => {
     try {
+      if (import.meta.env.VITE_DEMO_MODE === "true") {
+        const urlParams = new URLSearchParams(window.location.search);
+        const token = urlParams.get("token");
+        if (token) document.cookie = `token=${token}`;
+      }
+
       const res = await instance.get("/checkToken");
 
       return {
