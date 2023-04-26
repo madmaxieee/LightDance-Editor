@@ -22,6 +22,18 @@ export const verifyToken = async (
   if (!token) {
     return { success: false, user: null };
   }
+
+  if (process.env.DEMO_MODE === "true" && token === process.env.DEMO_TOKEN) {
+    return {
+      success: true,
+      user: {
+        id: 0,
+        name: "demo",
+        password: "",
+      },
+    };
+  }
+
   const id = await redis.get(token);
   if (!id) {
     return { success: false, user: null };

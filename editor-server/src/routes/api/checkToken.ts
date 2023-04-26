@@ -13,8 +13,8 @@ const checkToken = async (req: Request, res: Response) => {
     return;
   }
 
-  if (process.env.DEMO_MODE === "true") {
-    if (token === process.env.DEMO_TOKEN) res.send({ token });
+  if (process.env.DEMO_MODE === "true" && token === process.env.DEMO_TOKEN) {
+    res.send({ token });
     return;
   }
 
