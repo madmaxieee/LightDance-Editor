@@ -12,6 +12,7 @@ services:
       - "8081:80"
     networks:
       - lightdance-editor
+      - nginx
     depends_on:
       - editor
       - editor-server
@@ -81,8 +82,8 @@ services:
 
 networks:
   lightdance-editor:
-    external:
-      name: eeinfo
+  nginx:
+    external: true
 
 volumes:
   pg-data:
