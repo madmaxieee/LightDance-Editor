@@ -24,13 +24,12 @@ export const verifyToken = async (
   }
 
   if (process.env.DEMO_MODE === "true" && token === process.env.DEMO_TOKEN) {
+    const user = await prisma.user.findFirst();
+    if (user === null) throw new Error("No demo user found");
+
     return {
       success: true,
-      user: {
-        id: 0,
-        name: "demo",
-        password: "",
-      },
+      user,
     };
   }
 
