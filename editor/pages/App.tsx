@@ -17,6 +17,7 @@ import {
   syncLEDEffectRecord,
   syncCurrentLEDStatus,
 } from "@/core/actions";
+import { Typography } from "@mui/material";
 
 /**
  * Component for the main
@@ -71,7 +72,15 @@ function App() {
     })();
   }, [dispatch]);
 
-  return ready ? <Outlet /> : <Loading />;
+  return ready ? (
+    <Outlet />
+  ) : (
+    <Loading>
+      <Typography variant="h6" color="textSecondary">
+        First load may take a while, please wait...
+      </Typography>
+    </Loading>
+  );
 }
 
 export default App;

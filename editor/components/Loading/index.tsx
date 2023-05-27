@@ -1,8 +1,12 @@
-// @ts-expect-error (for importing css file)
+import { type ReactNode } from "react";
 import styles from "./styles.module.css";
 import { Box } from "@mui/material";
 
-function Loading() {
+type LoadingProps = {
+  children?: ReactNode;
+};
+
+function Loading({ children }: LoadingProps) {
   return (
     <Box
       sx={{
@@ -11,6 +15,8 @@ function Loading() {
         height: "100vh",
         justifyContent: "center",
         alignItems: "center",
+        flexDirection: "column",
+        gap: "3rem",
       }}
     >
       <div
@@ -20,6 +26,7 @@ function Loading() {
           <div key={i} />
         ))}
       </div>
+      {children}
     </Box>
   );
 }
