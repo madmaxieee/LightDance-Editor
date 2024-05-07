@@ -7,7 +7,7 @@ services:
     volumes:
       - ./redisData:/data
   postgresql:
-    image: postgres
+    image: postgres:15
     environment:
       POSTGRES_DB: lightdance
       POSTGRES_USER: lightdance-user
